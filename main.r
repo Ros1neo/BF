@@ -3,7 +3,23 @@
 # We would like to identify what product might be bought together, which one are the best selling products. Dummy variables on product category and K Means clustering on the products to identify combos to make discounts
 # We would like to know which are the clusters that are not spending a lot, but that would potentially spend more, if we change a marketing parameter, ex bundle selling
 # We would like to predict the spent amount based on the customer profile, and find the most accurative features predicting this. Regression
-# Multiclass logistic regression to identify what kind of bundle could be sold to a specific customer profile
+# Multiclass logistic regression to identify what kind of bundle could be sold to a specific customer profile?
+# Given a customer profile, a product category/bundle and a price, how likely is the person going to buy it? We don't have data for cart dropout
+# - Analyzing data for research
+#     ○ Who is more likely to spend more in a black Friday sale?
+#         § Men or Women.
+#         § Married or Un Married
+#         § Old Residents or new residents
+#     ○ Which type of products are more likely to be sold in a sale like black Friday?
+#     ○ Which type of products are common among men and which among women?
+# - Prediction/classification-
+#     ○ Predict Age of a customer based on the rest of available data.
+#     ○ Predict gender of a customer based on rest of data.
+#     ○ Predict amount of purchase based on rest of data.
+#  - Recommendation -
+#      ○ Suggest products based on age.
+#      ○ Suggest products based on location customers belong to.
+#      ○ Suggest products based on gender.
 
 # %% Imports
 library(randomForest)
@@ -21,6 +37,7 @@ set.seed(1234)
 # %% FIXME K means clustering
 kmeans(data, 5, 10)
 train_split <- 0.85
+
 # data <- data[sample(1:nrow(full),nrow(full),replace = F),] %>% select(-PassengerId, Name, Ticket)
 
 #R’s Random Forest algorithm has a few restrictions that we did not have with our decision trees.
