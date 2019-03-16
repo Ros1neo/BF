@@ -10,13 +10,16 @@ library(randomForest)
 library(readr)
 library(dplyr)
 
-data <- read.csv("BlackFriday.csv")
+ data <- read.csv("BlackFriday.csv")
 print(head(data))
 
 set.seed(1234)
 
-# %% K means clustering
-kmeans(data$Purchase, 5, 10)
+# TODO Creating dummies for product categories
+
+
+# %% FIXME K means clustering
+kmeans(data, 5, 10)
 train_split <- 0.85
 # data <- data[sample(1:nrow(full),nrow(full),replace = F),] %>% select(-PassengerId, Name, Ticket)
 
