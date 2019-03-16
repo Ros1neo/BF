@@ -10,7 +10,6 @@ library(randomForest)
 library(readr)
 library(dplyr)
 
-setwd("..//BF//")
 data <- read.csv("BlackFriday.csv")
 print(head(data))
 
